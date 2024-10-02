@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <style>
+        .taskList{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+         
+            
+
+        } .tasks{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid black;
+            border-radius: 12px;
+            padding: 12px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <%= pageTitle  %>
+    </h1>
+    <div class="taskList">
+        <% for(let i of myTasks){ %>
+            <div class="tasks">
+        <p>Title: <%= i.id %></p>
+        <p>Title: <%= i.title %></p>
+        <p>Description: <%= i.description %></p>
+        <p>Due Date: <%= i.dueDate %></p>
+        <p>Priority: <%= i.priority %></p>
+        <p>Completed: <%= i.completed %></p>
+        </div>
+            <% } %>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            border: 1px solid black;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <H1>TASK MANAGER</H1>
+    <form action="/tasks" method="post">
+        <label for="title">Task Title</label>
+        <input type="text" name="title">
+         <label for="description">Task Description</label>
+        <input type="text" name="description">
+         <label for="dueDate">Task Due Date</label>
+        <input type="date" name="dueDate">
+        <select name="priority" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <div>
+        <label for="completed">Complete Task?</label>
+        <input type="checkbox" name="completed" id="completed">
+        </div>
+        <button type="submit">Add Task</button>
+    </form>
+    
+    
+</body>
+</html>
